@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    overflow-x: hidden;
+}
+main{
+    z-index: 1;
+}
+header{
+    z-index: 1001; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; 
+}
+
+/* Top Navigation Bar */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: calc(100% - 250px);
+    margin-top: 0;
+    padding-top: 0;
+    top: 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav-item .nav-link {
+    color: #555;
+}
+
+.nav-item .nav-link:hover {
+    color: #007bff;
+}
+
+.nav-item .btn-danger {
+    margin-left: 10px;
+}
+
+
+.sidebar .sidebar-header {
+    padding: 20px;
+    background: #343a40;
+    color: #fff;
+}
+
+.sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+.sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: #ddd;
+}
+
+.sidebar ul li a:hover {
+    color: #fff;
+    background: #007bff;
+}
+
+.sidebar ul li.active > a {
+    background: #007bff;
+    color: #fff;
+}
+
+.sidebar ul li a[aria-expanded="true"] {
+    color: #fff;
+    background: #007bff;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #343a40;
+}
+
+ul.ultoggle .collapse.show {
+    background: #007bff;
+    color: #fff;
+}
+
+ul.ultoggle .collapse.show a {
+    color: #fff;
+}
+
+/* Content */
+#content {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    transition: all 0.3s;
+}
+
+#sidebarCollapse {
+    background: #007bff;
+    color: #fff;
+}
+
+#sidebarCollapse:hover {
+    background: #0056b3;
+    color: #fff;
+}
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background: #343a40;
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: auto;
+}
+.sidebar a{
+    color: #fff;
+}
+.sidebar.active {
+    margin-left: -250px;
+    z-index: 1000;
+}
+.navbar.active{
+    width: 100%;
+    z-index: 999;
+}
+#content {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    transition: all 0.3s;
+}
+
+#content.active {
+    width: 100%;
+    margin-left: 0;
+}
+
+
+
+.container-fluid {
+    padding: 20px;
+}
+
+.card-img-overlay {
+    transition: background-color 0.3s;
+}
+
+.card:hover .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.5); 
+    
+}
+
+.card-img-overlay h5,
+.card-img-overlay p {
+    color: white;
+    font-size:xx-large;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+}
+.foot-part{
+    background-color: rgba(0, 0, 0, 0.863);
+    height: 400px;
+}
+.fab{
+    font-size: 26px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+}
+#footer-logo{
+    color: white;  
+}
+.collection{
+    margin-left: 60px;
+    padding-left: 80px;
+}
+.quick_action{
+    display: flex;
+    justify-content: space-evenly;
+}
+img{
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    object-position: center;
+}
+@media (max-width:1199px){
+    .collection{
+        margin-left: auto;
+        padding-left: 0;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .navbar {
+        width: 100%;
+        z-index: 1002;
+    }
+    .nav-item .nav-link {
+        font-size: 0.8em;
+    }
+    .sidebar ul li a {
+        font-size: 0.9em;
+    }
+    .fab {
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .collection {
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .quick_action {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .sidebar.active {
+        margin-left: 0;
+        height: -500px;
+        width: 100%;
+    }
+    .card-img-overlay h5,
+    .card-img-overlay p {
+        font-size: large;
+    }
+    .cards .col-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .card {
+        width: 100%;
+    }
+    .recent_activities{
+        width: 90vw;
+    }
+
+
+    .sidebar {
+        top: -100%;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .sidebar.active {
+        transform: translateY(100%);
+        height: 725px;
+        overflow: hidden;
+        z-index: 999;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    #content {
+        width: 100%;
+        margin-left: 0;
+    }
+}

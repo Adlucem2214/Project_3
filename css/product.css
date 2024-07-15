@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color:#C56DA1;
+    --secondary-color: #bc5692;
+    --body-color:#EDC7B7;
+}
+#search-bar{
+    margin-right: 35%;
+}
+#brand{
+    background-image: url(../images/360_F_391520021_N3PK4GcbwrG8I5jryTt3Jbqfrx3vazfo.jpg);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+#search-btn{
+    background-color: #fff;
+    border: 1px solid #C56DA1;
+    color: #C56DA1 ;
+}
+#search-btn:hover{
+    background-color: #C56DA1;
+    color: #fff;
+}
+.dropdown-item:hover{
+    color: #bc5692 ;
+    background-color: #fff;
+}
+.dropdown-item:active{
+    background-color: #fff;
+}
+#photo-1{
+    background-size: cover;
+}
+.c-item{
+    height:1000px;
+}
+.c-img{
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+}
+.carousel-section{
+    background-color: #F6E4DC;
+    background-image: url(../images/white-2.jpg);
+    background-size: cover;
+    height: 800px;
+}
+#main-title{
+    background-image: url(../images/gold-textured-background.jpg);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;   
+}
+#show-btn{
+    background-color: #bc5692;
+    color: #fff;
+    font-size: larger;
+}
+/* Submit button style for contact us */
+#submit-btn{
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+#submit-btn:hover{
+    background-color: #fff;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+@media(max-width:800px){
+    #search-bar{
+        margin-right: 15%;
+    }
+}
+@media(max-width:576px){
+    .dropdown-item::before{
+        transform: rotate(-90deg);
+    }
+    #search-bar{
+        margin-right: 10%;
+    }
+    #search-size{
+        width: 120px;
+    }
+}
