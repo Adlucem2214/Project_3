@@ -1,0 +1,164 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* #nav-bar{
+    background-color: pink;
+} */
+/* #model-img-1{
+    padding-left: 200px;
+} */
+#top-home{
+     background-image: url(../images/white-3.jpg); 
+    /* background-color: #F6EBEB; */
+    background-size: cover;
+    height: 725px;
+}
+#img-front{
+    height:675px ;
+}
+#description{
+    padding-top: 10%;
+}
+em{
+    background-image: url(../images/360_F_391520021_N3PK4GcbwrG8I5jryTt3Jbqfrx3vazfo.jpg);
+      background-clip:text;
+      -webkit-background-clip:text;
+      color:transparent;      
+}
+#brand{
+    background-image: url(../images/360_F_391520021_N3PK4GcbwrG8I5jryTt3Jbqfrx3vazfo.jpg);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;   
+}
+#head-2{
+    font-size: 70px;
+}
+#para-1{
+    font-family:'Allura', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+}
+#explore-btn{
+    background-color: #C56DA1;
+    border: 1px solid #C56DA1;
+}
+/* The style of the second part */
+/* The style of the second part */
+/* The style of the second part */
+
+.card{
+    width: 25rem;
+    padding: 0;
+    border: 1px solid #EDC7B7;
+}
+#front-cards{
+    width: 22rem;
+    padding: 0;
+    border: 1px solid #EDC7B7 ;
+}
+#front-cards2{
+    width: 22rem;
+    border: 1px solid #EDC7B7 ;
+    padding: 0;
+}
+.fa-star{
+    font-size: 20px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.yellow{
+    color: #ECDA13;
+}
+.Gray{
+    color: #C3C0CB;
+}
+#img-1{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 3px;
+}
+#front-cards3{
+    width: 22rem;
+    padding: 0;
+    border: 1px solid #EDC7B7;
+}
+.card-icons{
+    display: flex;
+    margin-top: 23px;
+    justify-content: center;
+}
+.bx{
+    font-size: 35px;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: #E7B5A0;
+}
+#best-seller{  
+    background-image: url(../images/360_F_391520021_N3PK4GcbwrG8I5jryTt3Jbqfrx3vazfo.jpg);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+/* Style for Contact Page */
+/* Style for Contact Page */
+/* Style for Contact Page */
+
+#contact-section{
+    margin-bottom:10%;
+}
+.form-control:focus{
+    border-color: #E7B5A0 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.10) !important;
+}
+
+
+
+/* The style for the feedback section */
+/* The style for the feedback section */
+/* The style for the feedback section */
+.feedback-icon{
+    display: flex;
+}
+.avater{
+    display: flex;
+    margin-bottom: 30px;
+}
+.avater-img{
+    width: 50px;
+    height: 50px;
+}
+.avater-text{
+    margin-left: 20px;
+}
+.bx-like ,.bx-message-rounded-dots, .bx-share{
+    font-size: 24px;
+}
+.foot-part{
+    background-color: rgba(0, 0, 0, 0.863);
+    height: 400px;
+}
+.fab{
+    font-size: 26px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+}
+#footer-logo{
+    background-image: url(../images/360_F_391520021_N3PK4GcbwrG8I5jryTt3Jbqfrx3vazfo.jpg);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;  
+}
+
+@media (max-width: 1023px) {
+    #img-front {
+      display: none;
+    }
+  }

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sidebar Navigation with Header</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="admincss/main.css">
+</head>
+<body>
+
+    <header>
+        <div id="content">
+            <div class="navigation">
+                <nav class="sidebar bg-dark">
+                    <div class="sidebar-header">
+                        <h3 class="ml-3 px-3 mt-4">Adlucem</h3>
+                    </div>
+                    <ul class="list-unstyled components">
+                        <li>
+                            <a href="Dashborad.html">Dashborad</a>
+                        </li>
+                        <li>
+                            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Product</a>
+                            <ul class="collapse list-unstyled" id="homeSubmenu">
+                                <li>
+                                    <a href="addproduct.html"> Add Product</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Manage Product</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categories</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li>
+                                    <a href="addcat.html"> Add Categories</a>
+                                </li>
+                                <li>
+                                    <a href="managecategory.html">Manage Categories</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="order.html">Orders</a>
+                        </li>
+            
+                        <li>
+                            <a href="user.html">Users</a>
+                        </li>
+            
+                        <li>
+                            <a href="setting.html">Settings</a>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info mr-4">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="#">Adlucem</a>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Admin Name</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Account Settings</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-danger text-white" href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+        
+            </div>  
+        </div>  
+    
+               
+    
+    </header>
+    
+    
+        <main>
+            <section class="mt-4 pt-3">        
+                <div class="container mt-5 pt-5">
+                    <h1 class="mb-4">Dashborad</h1>
+                    <div class="row  cards">
+                        <div class="col-4">
+                            <div class="card mb-3" style="max-width: 25rem;">
+                                <div class="card-img-overlay d-flex align-items-center justify-content-center flex-column text-center">
+                                    <h5 class="card-title">Total sales</h5>
+                                    <p class="card-text">34000$</p>
+                                </div>
+                                <div class="card-body p-0">
+                                    <img src="image/sales.jpg" class="card-img-top" alt="Card Image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card mb-3" style="max-width: 25rem;">
+                                <div class="card-img-overlay d-flex align-items-center justify-content-center flex-column text-center">
+                                    <h5 class="card-title">Total Products</h5>
+                                    <p class="card-text">5000</p>
+                                </div>
+                                <div class="card-body p-0">
+                                    <img src="image/product.jpg" class="card-img-top" alt="Card Image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card mb-3" style="max-width: 25rem;">
+                                <div class="card-img-overlay d-flex align-items-center justify-content-center flex-column text-center">
+                                    <h5 class="card-title">Users</h5>
+                                    <p class="card-text">500</p>
+                                </div>
+                                <div class="card-body p-0">
+                                    <img src="image/users4.jpg" class="card-img-top" alt="Card Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <section class="container mt-5 pt-2">
+                <div>
+                    <h3>Recent Activites</h3>
+                </div>
+                <div>
+                    <div class="card recent_activities">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Lorem ipsum dolor sit amet consectetur.</li>
+                          <li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+                          <li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                      </div>
+                </div>
+            </section>
+
+            <section class="container mt-5 pt-2 pb-5">
+                <h2 class="mb-4">Quick Action</h2>
+                <div class="quick_action">
+                    <a href="#"><button type="button" class="btn btn-outline-primary">Add Product</button>
+                    </a>
+                    <a href="#"><button type="button" class="btn btn-outline-success">Manage Products</button>
+                    </a>
+                    <a href=""><button type="button" class="btn btn-outline-warning">Manage Categories</button>
+                    </a>
+                    <a href="#"><button type="button" class="btn btn-outline-info">Manage Users</button>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-5">
+            <section class="foot-part">
+                <div class="container">
+                    <div class="row">
+                        <div class="collection">
+                            <h1 class="text-center mt-5" id="footer-logo">Adlucem</h1>
+                            <p class="text-center mt-5 mx-3 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, possimus enim iusto sequi laborum libero deleniti veniam!</p>
+                            <div class="d-flex justify-content-center mb-5">
+                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-dribbble"></i>
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <p class="text-center text-white">Copyright © 2020 All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+          </footer>
+    
+  
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="adminjs/new.js"></script>
+</body>
+</html>

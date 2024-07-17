@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-image: url('images/sb2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: #FFF2E9;
+  }
+  .main-div {
+    display: flex;
+    width: 1100px;
+    height:600px;
+    max-width: 95%;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  .left-side {
+    flex: 1.5;
+    background-image: url('../images/shop2.jpg'); /* Replace with your elegant background image */
+    background-size: cover;
+    background-position: center;
+  }
+  .right-side {
+    flex: 1;
+    padding: 30px;
+  }
+  .form-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .welcome{
+      background-image: url(../images/gold-textured-background.jpg);
+      background-clip:text;
+      -webkit-background-clip:text;
+      color:transparent; 
+  }
+  .btn{
+      background-color:  #bc5692;
+      color: #fff;
+      font-size: 24px;;
+      font-weight: 600;
+      border-color:#bc5692 ;
+  }
+  .btn:hover{
+      background-color: #fff;
+      color:#bc5692 ;
+      border-color: #bc5692;
+  }
+  .btn:active{
+      background-color: #5b1b41;
+      color: #fff;
+      border: #5b1b41;
+  }
+  .text-on-image {
+    position: absolute;
+    top: 35%;
+    left: 35%; 
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+    padding: 10px; /* Optional padding */
+    border-radius: 10px; /* Optional rounded corners */
+  }
+  .text-on-image2 {
+    position: absolute;
+    top: 50%;
+    left: 36%; 
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    /* font-weight: bold; */
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+    padding: 10px; /* Optional padding */
+    border-radius: 10px; /* Optional rounded corners */
+  }
