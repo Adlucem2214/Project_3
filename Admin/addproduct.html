@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sidebar Navigation with Header</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="admincss/main.css">
+    <style>
+        main{
+            margin-top: 130px;
+        }
+        /* .form-control{
+            width: 700px;
+            max-width: auto;
+        } */
+        
+    </style>
+
+</head>
+<body>
+    <header>
+        <div id="content">
+            <div class="navigation">
+                <nav class="sidebar bg-dark">
+                    <div class="sidebar-header">
+                        <h3 class="ml-3 px-3 mt-4">Adlucem</h3>
+                    </div>
+                    <ul class="list-unstyled components">
+                        <li>
+                            <a href="Dashborad.html">Dashborad</a>
+                        </li>
+                        <li>
+                            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Product</a>
+                            <ul class="collapse list-unstyled" id="homeSubmenu">
+                                <li>
+                                    <a href="addproduct.html">Add Product</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Manage Product</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categories</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li>
+                                    <a href="addcat.html"> Add Categories</a>
+                                </li>
+                                <li>
+                                    <a href="managecategory.html">Manage Categories</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="order.html">Orders</a>
+                        </li>
+            
+                        <li>
+                            <a href="user.html">Users</a>
+                        </li>
+            
+                        <li>
+                            <a href="setting.html">Settings</a>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info mr-4">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="#">Adlucem</a>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Admin Name</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Account Settings</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-danger text-white" href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+        
+            </div>  
+        </div>  
+    </header>
+
+        <main class="container">
+            <div class="form_addproduct">
+             <h2 class="mb-4">Add Product</h2>
+             <form id="addProductForm">
+                <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <input type="text" class="form-control" id="productName" placeholder="Enter product name">
+                </div>
+                <div class="form-group">
+                    <label for="productImage">Product Image</label>
+                    <input type="file" class="form-control" id="productImage">
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Product Price</label>
+                    <input type="number" class="form-control" id="productPrice" placeholder="Enter product price">
+                </div>
+                <div class="form-group">
+                    <label for="productDescription">Product Description</label>
+                    <textarea class="form-control" id="productDescription" rows="3" placeholder="Enter product description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="productCategory">Category</label>
+                    <select class="form-control" id="productCategory">
+                        <option>Select category</option>
+                        <option>Category 1</option>
+                        <option>Category 2</option>
+                        <option>Category 3</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Add Product</button>
+            </form>
+            </div>
+    </main>
+
+    <footer class="mt-5">
+        <section class="foot-part">
+            <div class="container">
+                <div class="row">
+                    <div class="collection">
+                        <h1 class="text-center mt-5" id="footer-logo">Adlucem</h1>
+                        <p class="text-center mt-5 mx-3 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, possimus enim iusto sequi laborum libero deleniti veniam!</p>
+                        <div class="d-flex justify-content-center mb-5">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-dribbble"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <p class="text-center text-white">Copyright © 2020 All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="adminjs/new.js"></script>
+
+</body>
+</html>
