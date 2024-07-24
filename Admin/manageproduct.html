@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sidebar Navigation with Header</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="admincss/main.css">
+    <style>
+        .product_table{
+            margin-top: 110px;
+        }
+        .search{
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+        }
+        .bx-search{
+            font-size: 24px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="content">
+            <div class="navigation">
+                <nav class="sidebar bg-dark">
+                    <div class="sidebar-header">
+                        <h3 class="ml-3 px-3 mt-4">Adlucem</h3>
+                    </div>
+                    <ul class="list-unstyled components">
+                        <li>
+                            <a href="Dashborad.html">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Product</a>
+                            <ul class="collapse list-unstyled" id="homeSubmenu">
+                                <li>
+                                    <a href="addproduct.html"> Add Product</a>
+                                </li>
+                                <li>
+                                    <a href="manageproduct.html"> Manage Product</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categories</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li>
+                                    <a href="addcat.html"> Add Categories</a>
+                                </li>
+                                <li>
+                                    <a href="managecategory.html">Manage Categories</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="order.html">Orders</a>
+                        </li>
+                        <li>
+                            <a href="user.html">Users</a>
+                        </li>
+                        <li>
+                            <a href="setting.html">Settings</a>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info mr-4">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="#">Adlucem</a>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Admin Name</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Account Settings</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-danger text-white" href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+        
+            </div>  
+        </div>  
+    </header>
+
+    <main class="container  product_table">
+        <h2 class="mb-5 mt-5">Product List</h2>
+        <div class="search">
+            <input type="text" class="form mb-4" id="productsearch" placeholder="Search">
+            <i class='bx bx-search'></i>
+        </div>
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>Price</th>
+                    <th>Rating</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Stock</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="productTable">
+                <tr>
+                    <td>Sample Product</td>
+                    <td><img src="image/users4.jpg" alt="Product Image" style="width: 50px; height: 50px;"></td>
+                    <td>$100</td>
+                    <td>4.5</td>
+                    <td>Sample Description</td>
+                    <td>Sample Category</td>
+                    <td>20</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm edit-btn">Edit</button>
+                        <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <div class="modal fade" id="editProductModal" tabindex="-1" role="dialog" aria-labelledby="editProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editProductForm">
+                        <div class="form-group">
+                            <label for="editProductName">Product Name</label>
+                            <input type="text" class="form-control" id="editProductName">
+                        </div>
+                        <div class="form-group">
+                            <label for="editProductImage">Product Image</label>
+                            <input type="file" class="form-control" id="editProductImage">
+                        </div>
+                        <div class="form-group">
+                            <label for="editProductPrice">Product Price</label>
+                            <input type="number" class="form-control" id="editProductPrice">
+                        </div>
+                        <div class="form-group">
+                            <label for="editProductRating">Product Rating</label>
+                            <input type="number" class="form-control" id="editProductRating" step="0.1" max="5" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="editProductDescription">Product Description</label>
+                            <textarea class="form-control" id="editProductDescription" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="editProductCategory">Category</label>
+                            <select class="form-control" id="editProductCategory">
+                                <option>Select category</option>
+                                <option>Category 1</option>
+                                <option>Category 2</option>
+                                <option>Category 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="editProductStock">Stock</label>
+                            <input type="number" class="form-control" id="editProductStock">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="mt-5">
+        <section class="foot-part">
+            <div class="container">
+                <div class="row">
+                    <div class="collection">
+                        <h1 class="text-center mt-5" id="footer-logo">Adlucem</h1>
+                        <p class="text-center mt-5 mx-3 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, possimus enim iusto sequi laborum libero deleniti veniam!</p>
+                        <div class="d-flex justify-content-center mb-5">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-dribbble"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <p class="text-center text-white">Copyright © 2020 All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="adminjs/new.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.edit-btn').on('click', function() {
+                var row = $(this).closest('tr');
+                var productName = row.find('td:eq(0)').text();
+                var productPrice = row.find('td:eq(2)').text().replace('$', '');
+                var productRating = row.find('td:eq(3)').text();
+                var productDescription = row.find('td:eq(4)').text();
+                var productCategory = row.find('td:eq(5)').text();
+                var productStock = row.find('td:eq(6)').text();
+                
+                $('#editProductName').val(productName);
+                $('#editProductPrice').val(productPrice);
+                $('#editProductRating').val(productRating);
+                $('#editProductDescription').val(productDescription);
+                $('#editProductCategory').val(productCategory);
+                $('#editProductStock').val(productStock);
+
+                $('#editProductModal').modal('show');
+            });
+
+
+            $('.delete-btn').on('click', function() {
+                $(this).closest('tr').remove();
+            });
+
+
+            $('#editProductForm').on('submit', function(e) {
+                e.preventDefault();
+                var row = $('#productTable').find('tr:contains(' + $('#editProductName').val() + ')');
+                row.find('td:eq(0)').text($('#editProductName').val());
+                row.find('td:eq(2)').text('$' + $('#editProductPrice').val());
+                row.find('td:eq(3)').text($('#editProductRating').val());
+                row.find('td:eq(4)').text($('#editProductDescription').val());
+                row.find('td:eq(5)').text($('#editProductCategory').val());
+                row.find('td:eq(6)').text($('#editProductStock').val());
+                $('#editProductModal').modal('hide');
+            });
+        });
+    </script>
+</body>
+</html>
